@@ -1,0 +1,99 @@
+<div data-role="view" data-title="View" data-layout="main-nonav" data-model="app.signUp" data-show="app.signUp.onShow" data-after-show="app.signUp.afterShow" id="signUpScreen" class="screen">
+    <div id="signUpModel" class="form-view screen__content screen__content--form add-item-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+
+
+                    <label id="emailField" class="field km-listview-label field--email">
+                        <span class="field__label" data-bind="text: strings.signUp.signUpModel.editableListForm1.email.title"></span>
+
+
+                        <input id="email" data-bind="value: addFormData.email" type="email">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="phoneField" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.signUp.signUpModel.editableListForm1.phone.title"></span>
+
+
+                        <input id="phone" data-bind="value: addFormData.phone" type="text">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="passwordField" class="field km-listview-label field--password">
+                        <span class="field__label" data-bind="text: strings.signUp.signUpModel.editableListForm1.password.title"></span>
+
+
+                        <input id="password" data-bind="value: addFormData.password" type="password">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="repasswordField" class="field km-listview-label field--password">
+                        <span class="field__label" data-bind="text: strings.signUp.signUpModel.editableListForm1.repassword.title"></span>
+
+
+                        <input id="repassword" data-bind="value: addFormData.repassword" type="password">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+                    <label id="challengeQuestionField" class="field field--drop-down">
+
+                        <span class="field__label" data-bind="text: strings.signUp.signUpModel.editableListForm1.challengeQuestion.title"></span>
+
+                        <select data-bind="value: addFormData.challengeQuestion" data-role="dropdownlist">
+                            <option value="First Option">First Option</option>
+                            <option value="Second Option">Second Option</option>
+                            <option value="Third Option">Third Option</option>
+                        </select>
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="challengeAnswerField" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.signUp.signUpModel.editableListForm1.challengeAnswer.title"></span>
+
+
+                        <input id="challengeAnswer" data-bind="value: addFormData.challengeAnswer" type="text">
+
+                    </label>
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a data-role="button" href = "components/landing/view.html" data-bind="events: { click: signUpModel.cancel }, buttonText: strings.signUp.signUpModel.cancelButton"></a>
+                <a class="primary" data-role="button" data-bind="events: { click: signUpModel.submit }, buttonText: strings.signUp.signUpModel.submitButton"></a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_signUpModel -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+        <!-- END_CUSTOM_CODE_signUpModel -->
+    </div>
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-bind="text: strings.signUp.title"></span>
+
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+        </div>
+    </header>
+
+
+    <!-- START_CUSTOM_CODE_signUp -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_signUp -->
+</div>

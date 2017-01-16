@@ -14,34 +14,25 @@
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
     <script src="app.js"></script>
+    <script src="dataProviders/jsonProvider.js"></script>
+    <script src="dataProviders/registrationService.js"></script>
 </head>
 
 <body id="kendoUiMobileApp">
+    <script src="components/signUp/index.js"></script>
+    <script src="components/signIn/index.js"></script>
+    <script src="components/about/index.js"></script>
+    <script src="components/myPets/index.js"></script>
+    <script src="components/myProfile/index.js"></script>
     <script src="components/home/index.js"></script>
+    <script src="components/landing/index.js"></script>
     <div data-role="layout" data-id="main">
         <header data-role="header">
             <div data-role="navbar">
                 <span data-role="view-title"></span>
+                <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             </div>
         </header>
-        <footer data-role="footer">
-            <div data-role="tabstrip" id="navigation-container">
-                <a href="components/home/view.html" data-icon="home"><span class="navigation-link-text" data-bind="text: strings.home.title"></span></a>
-            </div>
-            <div id="navigation-container-more" style="display: none">
-            </div>
-        </footer>
-    </div>
-
-
-    <div id="navigation-show-more-view" data-role="view" data-title="Show More" data-layout="main">
-        <header data-role="header">
-            <div data-role="navbar">
-                <span data-bind="text: strings._app.showMoreTitle"></span>
-            </div>
-        </header>
-        <ul data-role="listview" data-style="inset" data-click="app.listViewClick">
-        </ul>
     </div>
 
     <div data-role="layout" data-id="main-nonav">
@@ -50,8 +41,20 @@
                 <span data-role="view-title"></span>
             </div>
         </header>
-        <footer data-role="footer">
-        </footer>
+    </div>
+
+    <div id="appDrawer" data-role="drawer" data-title="Navigation">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+        <ul id="navigation-container" data-role="listview">
+            <li><a href="components/home/view.html" data-icon="home"><span class="navigation-link-text" data-bind="text: strings.home.title"></span></a></li>
+            <li><a href="components/myProfile/view.html" data-icon="contacts"><span class="navigation-link-text" data-bind="text: strings.myProfile.title"></span></a></li>
+            <li><a href="components/myPets/view.html" data-icon="action"><span class="navigation-link-text" data-bind="text: strings.myPets.title"></span></a></li>
+            <li><a href="components/about/view.html" data-icon="info"><span class="navigation-link-text" data-bind="text: strings.about.title"></span></a></li>
+        </ul>
     </div>
     <div id="notify" class="notify-pop-up">
         <span class="notify-pop-up__content"></span>

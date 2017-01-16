@@ -1,0 +1,76 @@
+<div data-role="view" data-title="View" data-layout="main-nonav" data-model="app.signIn" data-show="app.signIn.onShow" data-after-show="app.signIn.afterShow" id="signInScreen" class="screen">
+    <div class="signin-view screen__content screen__content--signin">
+        <form>
+            <ul data-role="listview" data-style="inset">
+                <li>
+                    <label><span data-bind="text: strings.signIn.signInModel.emailLabel"></span>
+                        <input type="email" data-bind="value: signInModel.email" required autofocus>
+                    </label>
+                </li>
+                <li>
+                    <label><span data-bind="text: strings.signIn.signInModel.passwordLabel"></span>
+                        <input type="password" data-bind="value: signInModel.password" required>
+                    </label>
+                </li>
+            </ul>
+
+            <div class="button-group button-group-vertical">
+                <a data-role="button" class="primary" data-bind="events: { click: signInModel.signin }, buttonText: strings.signIn.signInModel.signinLabel"></a>
+
+                <a data-role="button" href="components/signUp/view.html" data-bind="events: { click: signInModel.toggleView }, buttonText: strings.signIn.signInModel.gotoRegisterLabel"></a>
+
+            </div>
+
+            <span class="status" data-bind="text: signInModel.errorMessage"></span>
+        </form>
+    </div>
+    <div class="signup-view screen__content screen__content--signup" style="display:none;">
+        <form>
+            <ul data-role="listview" data-style="inset">
+                <li>
+                    <label><span data-bind="text: strings.signIn.signInModel.registerEmailLabel"></span>
+                        <input type="email" data-bind="value: signInModel.email" required>
+                    </label>
+                </li>
+                <li>
+                    <label><span data-bind="text: strings.signIn.signInModel.registerPasswordLabel"></span>
+                        <input type="password" data-bind="value: signInModel.password">
+                    </label>
+                </li>
+                <li>
+                    <label><span data-bind="text: strings.signIn.signInModel.registerNameLabel"></span>
+                        <input type="text" data-bind="value: signInModel.displayName">
+                    </label>
+                </li>
+            </ul>
+            <div class="button-group button-group-vertical">
+                <a class="primary" data-role="button" data-bind="events: { click: signInModel.register }, buttonText: strings.signIn.signInModel.registerLabel"></a>
+                <a data-role="button" data-bind="events: { click: signInModel.toggleView }, buttonText: strings.signIn.signInModel.gotoSigninLabel"></a>
+            </div>
+
+            <span class="status" data-bind="text: signInModel.errorMessage"></span>
+        </form>
+    </div>
+    <div class="offline" align="center" style="display:none;">
+        You are currently offline. Before using this app in offline mode you must initialize it while you are online
+    </div>
+    <!-- START_CUSTOM_CODE_signInModel -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_signInModel -->
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-bind="text: strings.signIn.title"></span>
+
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+        </div>
+    </header>
+
+
+    <!-- START_CUSTOM_CODE_signIn -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_signIn -->
+</div>

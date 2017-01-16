@@ -1,0 +1,34 @@
+<div data-role="view" data-title="View" data-layout="main-nonav" data-model="app.landing" data-show="app.landing.onShow" data-after-show="app.landing.afterShow" id="landingScreen" class="screen">
+    <div id="landingModel" class="form-view screen__content screen__content--form add-item-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+            </ul>
+            <div style="text-align:center;">
+                  <img src="kendo/styles/images/dog.gif">
+            </div>
+            <div class="button-group">
+                <a data-role="button" href = "components/signIn/view.html" data-bind="events: { click: landingModel.cancel }, buttonText: strings.landing.landingModel.cancelButton"></a>
+                <a class="primary" href = "components/signUp/view.html" data-role="button" data-bind="events: { click: landingModel.submit }, buttonText: strings.landing.landingModel.submitButton"></a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_landingModel -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+        <!-- END_CUSTOM_CODE_landingModel -->
+    </div>
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-bind="text: strings.landing.title"></span>
+
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+        </div>
+    </header>
+
+
+    <!-- START_CUSTOM_CODE_landing -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_landing -->
+</div>

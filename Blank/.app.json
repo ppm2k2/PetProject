@@ -3,19 +3,204 @@
   "views": [
     {
       "type": "kendo-ui-mobile:view",
+      "name": "landing",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [],
+          "name": "landingModel",
+          "enableDataBinding": false,
+          "submitButton": "Sign Up",
+          "cancelButton": "Sign In"
+        }
+      ],
+      "title": "landing",
+      "addToNavigation": false
+    },
+    {
+      "type": "kendo-ui-mobile:view",
       "name": "home",
       "components": [],
-      "title": "Home View",
+      "title": "Home",
       "addToNavigation": true,
       "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "myProfile",
+      "components": [],
+      "title": "My Profile",
+      "addToNavigation": true,
+      "icon": "contacts"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "myPets",
+      "components": [],
+      "title": "My Pets",
+      "addToNavigation": true,
+      "icon": "action"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "about",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:about",
+          "name": "aboutModel",
+          "appName": "WagginTails",
+          "appVersion": "Version 1",
+          "appDescription": "Hybrid Mobile App for Pets",
+          "contactButton": true,
+          "contactLabel": "Contact us",
+          "contactMail": "support@example.com",
+          "facebookButton": true,
+          "facebookLabel": "Like us on Facebook",
+          "facebookLink": "https://www.facebook.com/Telerik",
+          "twitterButton": true,
+          "twitterLabel": "Follow us on Twitter",
+          "twitterLink": "https://twitter.com/telerik"
+        }
+      ],
+      "title": "About",
+      "addToNavigation": true,
+      "icon": "info"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "signIn",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:authentication",
+          "name": "signInModel",
+          "dataProvider": "jsonProvider",
+          "enableRegistration": true,
+          "gotoRegisterLabel": "Register",
+          "registerEmailLabel": "Email",
+          "registerPasswordLabel": "Password",
+          "registerNameLabel": "Name",
+          "registerLabel": "Register",
+          "registerRedirect": "landing",
+          "gotoSigninLabel": "Sign In",
+          "enableLogout": false,
+          "enableRememberme": false,
+          "emailLabel": "Email",
+          "passwordLabel": "Password",
+          "signinLabel": "Sign In",
+          "signinRedirect": "landing"
+        }
+      ],
+      "title": "SignIn",
+      "addToNavigation": false
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "signUp",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "email",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Email",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "email",
+                  "placeholder": "Type here ..."
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "phone",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Phone",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ..."
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "password",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Password",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "password",
+                  "placeholder": "Type here ..."
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "repassword",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Reenter Password",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "password",
+                  "placeholder": "Type here ..."
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "challengeQuestion",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Challenge Question",
+                  "inputType": "dropdownlist",
+                  "titlePosition": "left"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "challengeAnswer",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Challenge Answer",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ..."
+                }
+              ],
+              "name": "editableListForm1",
+              "formType": "add"
+            }
+          ],
+          "name": "signUpModel",
+          "enableDataBinding": false,
+          "submitButton": "Register",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "SignUp",
+      "addToNavigation": false
     }
   ],
-  "dataProviders": [],
+  "dataProviders": [
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "jsonProvider",
+      "source": "json",
+      "url": "http://54.162.72.241/pets/signin.php",
+      "title": "SignIn JSON Data Service"
+    },
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "registrationService",
+      "source": "json",
+      "url": "https://your-service-url/",
+      "title": "Registration JSON Data Service"
+    }
+  ],
   "name": "kendoUiMobileApp",
-  "navigation": "tabstrip",
-  "view": "home",
-  "transition": "slide",
-  "showMoreTab": true,
+  "navigation": "drawer",
+  "view": "landing",
   "skin": "nova",
   "skinMainColor": "#32364c",
   "skinTextColor": "#ffffff",

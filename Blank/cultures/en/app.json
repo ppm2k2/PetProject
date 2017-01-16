@@ -4,7 +4,77 @@
     "showMoreTitle": "Show More",
     "qrCodeScan": "Scan"
   },
+  "landing": {
+    "title": "landing",
+    "landingModel": {
+      "submitButton": "Sign Up",
+      "cancelButton": "Sign In"
+    }
+  },
   "home": {
-    "title": "Home View"
+    "title": "Home"
+  },
+  "myProfile": {
+    "title": "My Profile"
+  },
+  "myPets": {
+    "title": "My Pets"
+  },
+  "about": {
+    "title": "About",
+    "aboutModel": {
+      "appName": "WagginTails",
+      "appVersion": "Version 1",
+      "appDescription": "Hybrid Mobile App for Pets",
+      "contactLabel": "Contact us",
+      "facebookLabel": "Like us on Facebook",
+      "twitterLabel": "Follow us on Twitter"
+    }
+  },
+  "signIn": {
+    "title": "SignIn",
+    "signInModel": {
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "signinLabel": "Sign In",
+      "gotoRegisterLabel": "Register",
+      "registerEmailLabel": "Email",
+      "registerPasswordLabel": "Password",
+      "registerNameLabel": "Name",
+      "registerLabel": "Register",
+      "gotoSigninLabel": "Sign In"
+    }
+  },
+  "signUp": {
+    "title": "SignUp",
+    "signUpModel": {
+      "submitButton": "Register",
+      "cancelButton": "Cancel",
+      "editableListForm1": {
+        "email": {
+          "title": "Email",
+          "placeholder": "Type here ..."
+        },
+        "phone": {
+          "title": "Phone",
+          "placeholder": "Type here ..."
+        },
+        "password": {
+          "title": "Password",
+          "placeholder": "Type here ..."
+        },
+        "repassword": {
+          "title": "Reenter Password",
+          "placeholder": "Type here ..."
+        },
+        "challengeQuestion": {
+          "title": "Challenge Question"
+        },
+        "challengeAnswer": {
+          "title": "Challenge Answer",
+          "placeholder": "Type here ..."
+        }
+      }
+    }
   }
 }
